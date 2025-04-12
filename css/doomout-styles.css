@@ -1,1 +1,143 @@
+/* doomout-styles.css – Tailwind & WayPoints Inspired Styles */
+
+/* Import fonts & Tailwind’s base styles */
+@import url(‘https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap’);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base layer: global resets and typography */
+@layer base {
+html {
+@apply text-stone-800;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+@apply bg-stone-50 font-sans;
+}
+
+h1, h2, h3, .modal-title {
+@apply font-serif;
+}
+}
+
+/* Components: Modal, hero, buttons, forms, video, etc. /
+@layer components {
+/ Modal Styles */
+.modal {
+@apply fixed inset-0 bg-white bg-opacity-80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-400 z-50;
+}
+
+.modal-show {
+@apply opacity-100 pointer-events-auto;
+}
+
+.modal-close {
+@apply absolute top-0 right-0 p-4;
+}
+
+.modal-content {
+@apply relative p-8 bg-white rounded shadow-lg max-w-lg w-full overflow-y-auto transition-transform duration-400 transform translate-y-10;
+}
+
+.success {
+@apply absolute left-1/2 transform -translate-x-1/2 translate-y-10 opacity-0 transition-transform duration-400;
+max-width: 90%;
+width: 400px;
+}
+
+.success-show {
+@apply translate-y-0 opacity-100;
+}
+
+/* Hero Section */
+.hero {
+@apply py-20 flex flex-col items-center justify-center text-center;
+}
+
+.title {
+@apply text-4xl md:text-5xl font-serif;
+}
+
+.shift {
+@apply relative inline-block overflow-hidden;
+}
+
+.word-shift b {
+@apply absolute left-0 top-0 opacity-0 transition-opacity duration-400;
+}
+
+.word-shift b.is-visible {
+@apply relative opacity-100;
+}
+
+/* Button */
+.button {
+@apply px-6 py-3 rounded-full font-medium bg-stone-900 text-stone-100 shadow-lg transition-transform duration-200;
+}
+
+.button:hover {
+@apply scale-105 shadow-xl;
+}
+
+/* Form Group */
+form .group {
+@apply mb-8 relative w-full;
+}
+
+form .group input {
+@apply w-full border-b border-stone-400 bg-transparent py-2 text-xl;
+}
+
+form .group label {
+@apply absolute left-0 top-0 text-xl pointer-events-none transition-all duration-400;
+}
+
+form .group input:focus + label,
+form .group input:not(:placeholder-shown) + label {
+@apply text-sm text-stone-900;
+}
+
+/* Video Wrapper */
+.outerVideoWrapper2 {
+@apply my-10 w-full;
+}
+
+.videoWrapper {
+@apply relative overflow-hidden w-full bg-stone-200;
+padding-bottom: 56.25%; /* 16:9 ratio */
+}
+
+.videoWrapper iframe {
+@apply absolute inset-0 w-full h-full;
+}
+
+/* Screen Wrapper */
+.screen-wrapper {
+@apply mx-auto relative overflow-hidden z-10 px-10 md:px-12 max-w-6xl;
+}
+
+/* Footer */
+.footer {
+@apply bg-stone-100 py-10 text-center;
+}
+
+.footer p {
+@apply text-xs text-stone-800;
+}
+}
+
+/* Utilities */
+@layer utilities {
+.no-scroll {
+overflow: hidden;
+}
+
+.content-blurred {
+@apply filter blur-sm transition-filter duration-400;
+}
+}
 
