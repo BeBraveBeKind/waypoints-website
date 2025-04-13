@@ -170,14 +170,22 @@ body {
 }
 
 .content > .logo img {
-  height: 100px;
+  height: 200px;
   width: auto;
+  margin-top: 2rem;
+}
+
+.content > .logo {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 /* -----------------------------------------------------------
    Hero Section
 ----------------------------------------------------------- */
 .hero {
+  padding-top: 3rem;
   padding: 6rem 2rem;
   display: flex;
   flex-direction: column;
