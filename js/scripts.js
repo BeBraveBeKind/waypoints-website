@@ -3513,17 +3513,20 @@ initHeadline();
 
 // Ensure the DOM is fully loaded before running the script
 $(document).ready(function () {
-// Click event for toggling the modal
-    $('.modal-toggle').click(function () {
-        $('.modal').toggleClass('modal-show'); // Show/hide the modal
+    // Click event for toggling the modal
+    $('.modal-toggle').click(function (event) {
+        event.preventDefault(); // Prevent link default action
+        $('.modal').toggleClass('modal-show'); // Show or hide the modal
         $('body').toggleClass('no-scroll'); // Disable scrolling when modal is open
     });
 
-    // Optional: Close modal when clicking outside its content
+    // Close modal when clicking outside modal-content
     $(document).click(function (event) {
-        if ($(event.target).closest('.modal-content').length === 0 && $(event.target).closest('.modal-toggle').length === 0) {
+        if ($(event.target).closest('.modal-content').length === 0 && 
+            $(event.target).closest('.modal-toggle').length === 0) {
             $('.modal').removeClass('modal-show');
             $('body').removeClass('no-scroll');
         }
     });
+});
 });
