@@ -560,7 +560,7 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 .footer img {
-  height 60px !important;
+  height 40px;
   width: auto;
 }
 
