@@ -1,20 +1,27 @@
 /* 
-  waypoints-styles.css – Custom CSS for Waypoints
+  waypoints-styles.css – Custom CSS for Waypoints with Modern Nostalgia theme
 */
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono&display=swap');
 
 /* -----------------------------------------------------------
    Base & Reset Overrides
 ----------------------------------------------------------- */
 body {
   font-family: 'Inter', sans-serif;
-  color: #1F2937;  /* gray-800 */
-  background-color: #F9FAFB;  /* gray-50 */
+  color: #292524;  /* stone-800 */
+  background-color: #FAFAF9;  /* stone-50 */
   line-height: 1.6;
 }
 
-/* Apply font-serif class to elements that need Fraunces font */
+/* Font Classes */
 .font-serif {
   font-family: 'Fraunces', serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
 }
 
 /* -----------------------------------------------------------
@@ -23,7 +30,7 @@ body {
 .modal {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(41, 37, 36, 0.7);
   backdrop-filter: blur(8px);
   display: none; /* Hidden by default */
   align-items: center;
@@ -31,6 +38,7 @@ body {
   transition: opacity 0.4s ease;
   z-index: 50;
 }
+
 .modal-show {
   display: flex;
 }
@@ -41,8 +49,8 @@ body {
   right: 1rem;
   padding: 0.5rem;
   cursor: pointer;
-  color: #4B5563;
-  background: white;
+  color: #78716C; /* stone-500 */
+  background: #FAFAF9; /* stone-50 */
   border-radius: 9999px;
   width: 40px;
   height: 40px;
@@ -55,7 +63,7 @@ body {
 
 .modal-close:hover {
   transform: rotate(90deg);
-  background: #F3F4F6;
+  background: #F5F5F4; /* stone-100 */
 }
 
 .modal-close .icon {
@@ -68,9 +76,10 @@ body {
 }
 
 .modal-content {
-  background: #fff;
+  background: #FAFAF9; /* stone-50 */
   padding: 2.5rem;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
+  border: 2px solid #292524; /* stone-800 */
   max-width: 32rem;
   width: 100%;
   overflow-y: auto;
@@ -78,6 +87,30 @@ body {
   transition: transform 0.4s ease;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
   position: relative;
+}
+
+/* Decorative corners for modal */
+.modal-content::before,
+.modal-content::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid #292524; /* stone-800 */
+}
+
+.modal-content::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.modal-content::after {
+  bottom: 0;
+  right: 0;
+  border-left: 0;
+  border-top: 0;
 }
 
 .modal-show .modal-content {
@@ -89,12 +122,12 @@ body {
   font-size: 1.875rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #111827;
+  color: #292524; /* stone-800 */
 }
 
 .modal-subtitle {
   font-size: 1.125rem;
-  color: #4B5563;
+  color: #57534E; /* stone-600 */
   margin-bottom: 2rem;
 }
 
@@ -102,7 +135,7 @@ body {
 .success {
   position: absolute;
   inset: 0;
-  background: white;
+  background: #FAFAF9; /* stone-50 */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -153,6 +186,17 @@ body {
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
+  position: relative;
+}
+
+/* Dotted background pattern for hero */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23292524' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='1'/%3E%3C/g%3E%3C/svg%3E");
+  z-index: -1;
 }
 
 .title {
@@ -161,12 +205,12 @@ body {
   font-weight: 700;
   margin: 0;
   line-height: 1.2;
-  color: #111827;
+  color: #292524; /* stone-800 */
 }
 
 .subtitle {
   font-size: 1.25rem;
-  color: #4B5563;
+  color: #57534E; /* stone-600 */
   max-width: 36rem;
   margin: 2rem auto;
 }
@@ -181,7 +225,7 @@ body {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  color: #1D4ED8; /* Blue color for emphasis */
+  color: #92400E; /* yellow-800 for vintage look */
 }
 
 .word-shift {
@@ -212,13 +256,13 @@ body {
 .button {
   display: inline-block;
   padding: 0.875rem 2rem;
-  background-color: #2563EB;  /* blue-600 */
+  background-color: #292524;  /* stone-800 */
   color: white;
-  border-radius: 9999px;
+  border-radius: 0.5rem;
   text-align: center;
   font-family: 'Fraunces', serif;
   font-weight: 600;
-  box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   border: none;
@@ -228,13 +272,36 @@ body {
 
 .button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.5);
-  background-color: #1D4ED8; /* blue-700 */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+  background-color: #1C1917; /* stone-900 */
 }
 
 .button:active {
   transform: translateY(1px);
-  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+}
+
+.button-outline {
+  background-color: transparent;
+  border: 2px solid #292524; /* stone-800 */
+  color: #292524;
+}
+
+.button-outline:hover {
+  background-color: rgba(41, 37, 36, 0.05); /* stone-800 with opacity */
+}
+
+/* Badge style buttons */
+.badge-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #92400E; /* yellow-800 */
+  color: #FAFAF9; /* stone-50 */
+  font-family: 'Fraunces', serif;
+  font-size: 0.875rem;
+  transform: rotate(-3deg);
+  border: none;
+  cursor: pointer;
 }
 
 /* -----------------------------------------------------------
@@ -250,15 +317,16 @@ form .group input {
   width: 100%;
   padding: 0.75rem 0;
   border: none;
-  border-bottom: 2px solid #E5E7EB;  /* gray-200 */
+  border-bottom: 2px solid #D7D3D0;  /* stone-300 */
   font-size: 1.125rem;
   background: transparent;
   outline: none;
   transition: border-color 0.3s ease;
+  font-family: 'JetBrains Mono', monospace;
 }
 
 form .group input:focus {
-  border-color: #2563EB; /* blue-600 */
+  border-color: #92400E; /* yellow-800 */
 }
 
 form .group label {
@@ -266,7 +334,7 @@ form .group label {
   left: 0;
   top: 0.75rem;
   font-size: 1.125rem;
-  color: #6B7280; /* gray-500 */
+  color: #78716C; /* stone-500 */
   pointer-events: none;
   transition: all 0.3s ease;
 }
@@ -274,7 +342,7 @@ form .group label {
 form .group input:focus + label,
 form .group input:not(:placeholder-shown) + label {
   font-size: 0.875rem;
-  color: #2563EB; /* blue-600 */
+  color: #92400E; /* yellow-800 */
   top: -0.5rem;
 }
 
@@ -290,10 +358,36 @@ form .group input:not(:placeholder-shown) + label {
   position: relative;
   width: 100%;
   padding-bottom: 56.25%; /* 16:9 ratio */
-  background-color: #F3F4F6; /* gray-100 */
-  border-radius: 1rem;
+  background-color: #E7E5E4; /* stone-200 */
+  border-radius: 0.5rem;
+  border: 2px solid #292524; /* stone-800 */
   overflow: hidden;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Decorative corners for video */
+.videoWrapper::before,
+.videoWrapper::after {
+  content: "";
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  z-index: 10;
+  border: 2px solid #292524; /* stone-800 */
+}
+
+.videoWrapper::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.videoWrapper::after {
+  bottom: 0;
+  right: 0;
+  border-left: 0;
+  border-top: 0;
 }
 
 .videoWrapper iframe,
@@ -327,10 +421,35 @@ form .group input:not(:placeholder-shown) + label {
 
 .feature-card {
   padding: 2rem;
-  background: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  background: #FAFAF9; /* stone-50 */
+  border-radius: 0.5rem;
+  border: 2px solid #292524; /* stone-800 */
+  position: relative;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Decorative corners for feature cards */
+.feature-card::before,
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid #292524; /* stone-800 */
+}
+
+.feature-card::before {
+  top: 0;
+  left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+.feature-card::after {
+  bottom: 0;
+  right: 0;
+  border-left: 0;
+  border-top: 0;
 }
 
 .feature-card:hover {
@@ -342,12 +461,12 @@ form .group input:not(:placeholder-shown) + label {
   width: 56px;
   height: 56px;
   margin: 0 auto 1.5rem;
-  background: #EFF6FF; /* blue-50 */
+  background: #FEF3C7; /* yellow-100 */
   border-radius: 9999px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #2563EB; /* blue-600 */
+  color: #92400E; /* yellow-800 */
 }
 
 .icon-container svg {
@@ -356,17 +475,91 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 /* -----------------------------------------------------------
+   Challenge Cards
+----------------------------------------------------------- */
+.challenge-card {
+  background: #FAFAF9; /* stone-50 */
+  border: 2px solid #292524; /* stone-800 */
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.challenge-card-corner {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+}
+
+.challenge-card-corner-tl {
+  top: 0;
+  left: 0;
+  border-top: 2px solid #292524;
+  border-left: 2px solid #292524;
+}
+
+.challenge-card-corner-tr {
+  top: 0;
+  right: 0;
+  border-top: 2px solid #292524;
+  border-right: 2px solid #292524;
+}
+
+.challenge-card-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid #292524;
+  border-left: 2px solid #292524;
+}
+
+.challenge-card-corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid #292524;
+  border-right: 2px solid #292524;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-family: 'Fraunces', serif;
+  font-size: 0.875rem;
+  background: #92400E; /* yellow-800 */
+  color: #FAFAF9; /* stone-50 */
+}
+
+.badge-featured {
+  transform: rotate(-3deg);
+}
+
+.badge-early {
+  background: #9F1239; /* rose-800 */
+  transform: rotate(3deg);
+}
+
+.badge-allday {
+  background: #1E40AF; /* blue-800 */
+  transform: rotate(-2deg);
+}
+
+/* -----------------------------------------------------------
    Footer Styles
 ----------------------------------------------------------- */
 .footer {
-  background-color: white;
-  border-top: 1px solid #E5E7EB; /* gray-200 */
+  background-color: #FAFAF9; /* stone-50 */
+  border-top: 1px solid #E7E5E4; /* stone-200 */
   padding: 0;
   margin-top: 4rem;
 }
 
 .footer a {
   text-decoration: none;
+  color: #57534E; /* stone-600 */
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #292524; /* stone-800 */
 }
 
 /* -----------------------------------------------------------
@@ -461,7 +654,7 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 .border-gray-200 {
-  border-color: #E5E7EB;
+  border-color: #E7E5E4; /* stone-200 */
 }
 
 /* Text utilities */
@@ -469,16 +662,24 @@ form .group input:not(:placeholder-shown) + label {
   text-align: center;
 }
 
-.text-gray-700 {
-  color: #374151;
+.text-stone-500 {
+  color: #78716C;
 }
 
-.text-gray-900 {
-  color: #111827;
+.text-stone-600 {
+  color: #57534E;
 }
 
-.text-gray-600 {
-  color: #4B5563;
+.text-stone-700 {
+  color: #44403C;
+}
+
+.text-stone-800 {
+  color: #292524;
+}
+
+.text-stone-900 {
+  color: #1C1917;
 }
 
 .text-sm {
@@ -497,8 +698,8 @@ form .group input:not(:placeholder-shown) + label {
   font-weight: 700;
 }
 
-.hover\:text-gray-900:hover {
-  color: #111827;
+.hover\:text-stone-900:hover {
+  color: #1C1917;
 }
 
 /* Grid utilities */
@@ -512,6 +713,11 @@ form .group input:not(:placeholder-shown) + label {
 
 .gap-8 {
   gap: 2rem;
+}
+
+/* Border dashed utility */
+.border-dashed {
+  border-style: dashed;
 }
 
 /* Media queries */
@@ -539,5 +745,9 @@ form .group input:not(:placeholder-shown) + label {
   
   .md\:mb-0 {
     margin-bottom: 0;
+  }
+  
+  .hide-mobile {
+    display: block;
   }
 }
