@@ -39,19 +39,21 @@
         <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
         <h2 class="modal-title">Connect with Waypoints</h2>
         <p class="modal-subtitle">We're partnering with forward-thinking regions ready for growth. Let's discuss how we can help yours thrive.</p>
-        <form class='form' name='waypointsForm' method='POST'><input type='hidden' name='form-name' value='waypointsForm' />
+        <form class='form' action="https://formspree.io/f/michael@mywaypoints.app" method="POST">
           <div class="group">
             <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
             <label for="first-name">First name</label>
             <span class="border"></span>
-          </div>
-          <div class="group">
-            <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
-            <label for="email">Email</label>
-            <span class="border"></span>
-          </div>
-          <button type="submit" class="button">Get in Touch</button>
-        </form>
+      </div>
+      <div class="group">
+        <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+        <label for="email">Email</label>
+        <span class="border"></span>
+      </div>
+        <input type="hidden" name="_subject" value="New Waypoints Contact">
+        <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
+        <button type="submit" class="button">Get in Touch</button>
+      </form>
       </div>
     </div>
   </div>
@@ -182,33 +184,46 @@
     });
 
     // Form submission
-    $(".form").submit(function(e) {
+  $(".form").submit(function(e) {
+    // Don't prevent the form from submitting by default
+    
+    // Get the first name to personalize thank you message
+    var firstName = $("#firstName").val();
+    $('.first-name').text("Thank you, " + firstName + "!");
+    
+    // Only show the success UI immediately if we're in development
+    // In production, Formspree will handle the redirect
+    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
       e.preventDefault();
-      var $form = $(this);
-      
-      // In a real implementation, you would post to your server
-      // For demo purposes, we'll just show the success message
       $('.form-content').addClass('form-content-hide');
       $('.success').addClass('success-show');
-      
-      // Get the first name to personalize thank you message
-      var firstName = $("#firstName").val();
-      $('.first-name').text("Thank you, " + firstName + "!");
-    });
-
-    // ScrollReveal animations
-    ScrollReveal().reveal('.hero, .title, .subtitle, .video, .screen, .features, .feature-card', {
-      distance: '40px',
-      duration: 1200,
-      delay: 200,
-      easing: 'ease-out',
-      origin: 'bottom',
-      reset: false,
-      mobile: true,
-      opacity: 0,
-      interval: 200
-    });
+    }
   });
+  
+  // Check for thank-you parameter in URL to show success message
+  $(document).ready(function() {
+    if (window.location.search.includes('thank-you=true')) {
+      $('.modal').addClass('modal-show');
+      $('.content').addClass('content-blurred');
+      $('body').addClass('no-scroll');
+      $('.form-content').addClass('form-content-hide');
+      $('.success').addClass('success-show');
+    }
+  });
+
+  // ScrollReveal animations
+  ScrollReveal().reveal('.hero, .title, .subtitle, .video, .screen, .features, .feature-card', {
+    distance: '40px',
+    duration: 1200,
+    delay: 200,
+    easing: 'ease-out',
+    origin: 'bottom',
+    reset: false,
+    mobile: true,
+    opacity: 0,
+    interval: 200
+  });
+});
 </script>
 </body>
 </html>
