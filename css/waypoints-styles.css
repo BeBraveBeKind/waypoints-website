@@ -564,12 +564,6 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 .footer img {
-  .footer .mb-4 img,
-  .footer .md\:mb-0 img {
-  height: 80px !important; 
-  width: auto !important;
-  max-width: none !important;
-  min-height: 80px !important;  
   height: 80px;
   width: auto;
 }
