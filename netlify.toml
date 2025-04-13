@@ -6,8 +6,3 @@
   to = "/index.html"
   status = 200
 
-[[headers]]
-  for = "/videos/*"
-    [headers.values]
-    Content-Type = "video/mp4"
-    Access-Control-Allow-Origin = "*"
