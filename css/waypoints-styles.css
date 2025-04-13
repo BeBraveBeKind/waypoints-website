@@ -564,8 +564,16 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 .footer img {
-  height: 56px;
+  height: 80px;
   width: auto;
+}
+
+.footer {
+  padding-top: 1.5rem;
+}
+
+.footer .flex {
+  align-items: center;
 }
 
 .footer a {
