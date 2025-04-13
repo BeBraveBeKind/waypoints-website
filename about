@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>About Waypoints | Our Mission and Team</title>
+    <meta name="title" content="About Waypoints | Our Mission and Team">
+    <meta name="description" content="Learn about Waypoints' mission to help regions thrive through innovative solutions that connect outdoor assets, technology, and community.">
+    <link href="images/thumbnail.jpg" rel="apple-touch-icon">
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <!-- Load Tailwind via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"/>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/waypoints-styles.css">
+  </head>
+  <body>
+    <div class="content">
+      <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+      
+      <div class="max-w-4xl mx-auto px-6 py-12">
+        <h1 class="title text-3xl md:text-4xl font-serif mb-8">About Waypoints</h1>
+        
+        <div class="prose max-w-none">
+          <section class="mb-12">
+            <h2 class="text-2xl font-serif mb-4">Our Mission</h2>
+            <p class="mb-4">At Waypoints, we're on a mission to transform how regions leverage their unique outdoor assets to drive sustainable economic growth, foster community engagement, and attract innovation. We believe that the path to regional prosperity lies in connecting the dots between technology, outdoor recreation, and local businesses.</p>
+            
+            <p class="mb-4">Our approach is built on three core pillars:</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
+              <div class="feature-card">
+                <div class="icon-container">
+                  <i data-feather="compass"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Discover</h3>
+                <p>We help regions identify and activate their underutilized outdoor assets, transforming them into engines for economic development.</p>
+              </div>
+              
+              <div class="feature-card">
+                <div class="icon-container">
+                  <i data-feather="link"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Connect</h3>
+                <p>We build bridges between outdoor enthusiasts, local businesses, and community initiatives, creating an ecosystem of mutual growth.</p>
+              </div>
+              
+              <div class="feature-card">
+                <div class="icon-container">
+                  <i data-feather="bar-chart-2"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Thrive</h3>
+                <p>We implement sustainable solutions that deliver measurable economic impact while preserving the natural and cultural resources that make each region unique.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section class="mb-12">
+            <h2 class="text-2xl font-serif mb-4">Our Story</h2>
+            <p class="mb-4">Waypoints was founded in 2024 by a team of outdoor enthusiasts, technologists, and economic development experts who saw an opportunity to help regions unlock their full potential.</p>
+            
+            <p class="mb-4">After years of working with communities across the country, we noticed a common thread: regions with exceptional outdoor assets often struggled to translate those resources into economic opportunities. At the same time, we witnessed how technology could bridge gaps and create new possibilities.</p>
+            
+            <p class="mb-4">Waypoints was born from the belief that by bringing together the right mix of strategic planning, technology solutions, and community engagement, we could help regions chart a path to sustainable growth and prosperity.</p>
+          </section>
+          
+          <section class="mb-12">
+            <h2 class="text-2xl font-serif mb-4">Our Approach</h2>
+            <p class="mb-4">We work closely with regional stakeholders – from economic development organizations and tourism boards to local businesses and community groups – to develop tailored solutions that address their unique challenges and opportunities.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+              <div class="bg-stone-50 p-6 border-2 border-stone-800 rounded-lg relative">
+                <h3 class="text-xl font-bold mb-2">1. Assessment & Strategy</h3>
+                <p>We start by understanding your region's assets, challenges, and goals, then develop a comprehensive strategy for growth.</p>
+              </div>
+              
+              <div class="bg-stone-50 p-6 border-2 border-stone-800 rounded-lg">
+                <h3 class="text-xl font-bold mb-2">2. Technology Solutions</h3>
+                <p>We implement innovative tools that connect outdoor enthusiasts with local businesses and gather valuable data to inform decision-making.</p>
+              </div>
+              
+              <div class="bg-stone-50 p-6 border-2 border-stone-800 rounded-lg">
+                <h3 class="text-xl font-bold mb-2">3. Partnership Building</h3>
+                <p>We foster relationships between key stakeholders, creating an ecosystem of collaboration and mutual benefit.</p>
+              </div>
+              
+              <div class="bg-stone-50 p-6 border-2 border-stone-800 rounded-lg">
+                <h3 class="text-xl font-bold mb-2">4. Sustainable Growth</h3>
+                <p>We establish metrics for success and implement systems that drive long-term economic development while preserving natural resources.</p>
+              </div>
+            </div>
+          </section>
+          
+          <section class="mb-12">
+            <h2 class="text-2xl font-serif mb-4">Our Impact</h2>
+            <p class="mb-4">Through our work with regions across the country, we've helped communities:</p>
+            
+            <ul class="list-disc pl-6 mb-6">
+              <li class="mb-2">Increase visitor spending at local businesses by up to 35%</li>
+              <li class="mb-2">Extend average visitor stay by 1-3 days</li>
+              <li class="mb-2">Generate valuable first-party data for informed decision-making</li>
+              <li class="mb-2">Create new partnerships between outdoor recreation providers and local merchants</li>
+              <li class="mb-2">Distribute tourism impact beyond traditional hotspots</li>
+            </ul>
+            
+            <p class="mb-6">We're proud of the results we've achieved, but we're just getting started. Our vision is to build a network of thriving regions that leverage their unique outdoor assets to create sustainable economic opportunities for all community members.</p>
+          </section>
+        </div>
+        
+        <div class="text-center mt-12">
+          <button class="button modal-toggle">Partner with Waypoints</button>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="max-w-5xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row justify-between items-center py-6">
+            <div class="mb-4 md:mb-0">
+              <img src="images/logodo.png" alt="Waypoints logo" class="h-14">
+            </div>
+            <div class="flex space-x-6">
+              <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
+              <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+              <a href="privacy.html" class="text-gray-700 hover:text-gray-900">Privacy</a>
+            </div>
+          </div>
+          <div class="border-t border-gray-200 py-4 text-sm text-center text-gray-600">
+            &copy; 2025 Waypoints. All rights reserved.
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <!-- Modal for contact form (same as in index.html) -->
+    <div class="modal">
+      <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
+      <div class="modal-content">
+        <div class="success">
+          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+          <h2 class="modal-title first-name" id="title-name"></h2>
+          <p>Thank you for reaching out! We'll be in touch with you shortly to discuss how Waypoints can help your region grow.</p>
+          <a href="index.html" class="button">Back home</a>
+        </div>
+        <div class="form-content">
+          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+          <h2 class="modal-title">Connect with Waypoints</h2>
+          <p class="modal-subtitle">We're partnering with forward-thinking regions ready for growth. Let's discuss how we can help yours thrive.</p>
+          <form class='form' action="https://formspree.io/f/michael@mywaypoints.app" method="POST">
+            <div class="group">
+              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
+              <label for="first-name">First name</label>
+              <span class="border"></span>
+            </div>
+            <div class="group">
+              <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+              <label for="email">Email</label>
+              <span class="border"></span>
+            </div>
+            <input type="hidden" name="_subject" value="New Waypoints Contact">
+            <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
+            <button type="submit" class="button">Get in Touch</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+      $(function(){
+        // Initialize Feather icons
+        feather.replace();
+        
+        // Open & close modal
+        $('.modal-toggle').click(function(){
+          $('.modal').toggleClass('modal-show');
+          $('.content').toggleClass('content-blurred');
+          $('body').toggleClass('no-scroll');
+        });
+
+        // Close modal on escape key
+        $(document).keyup(function(e) {
+          if (e.key === "Escape") {
+            $('.modal').removeClass('modal-show');
+            $('.content').removeClass('content-blurred');
+            $('body').removeClass('no-scroll');
+          }
+        });
+
+        // Form submission
+        $(".form").submit(function(e) {
+          // Don't prevent the form from submitting
+          // Just show the success message UI
+          var firstName = $("#firstName").val();
+          $('.first-name').text("Thank you, " + firstName + "!");
+          
+          // Only show the success UI immediately if we're in development
+          // In production, Formspree will handle the redirect
+          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+            e.preventDefault();
+            $('.form-content').addClass('form-content-hide');
+            $('.success').addClass('success-show');
+          }
+        });
+        
+        // Check for thank-you parameter in URL to show success message
+        $(document).ready(function() {
+          if (window.location.search.includes('thank-you=true')) {
+            $('.modal').addClass('modal-show');
+            $('.content').addClass('content-blurred');
+            $('body').addClass('no-scroll');
+            $('.form-content').addClass('form-content-hide');
+            $('.success').addClass('success-show');
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
