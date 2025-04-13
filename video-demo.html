@@ -3,146 +3,166 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>Doomout</title>
-    <meta name="title" content="Doomout">
-    <meta name="author" content="@ijazulrehman">
+    <title>Waypoints | Navigate Your Future</title>
+    <meta name="title" content="Waypoints | Navigate Your Future">
+    <meta name="description" content="Waypoints helps regions grow through innovative solutions and partnerships">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://doomout.com/">
-    <meta property="og:title" content="Doomout">
+    <meta property="og:url" content="https://waypoints.com/">
+    <meta property="og:title" content="Waypoints | Navigate Your Future">
+    <meta property="og:description" content="Waypoints helps regions grow through innovative solutions and partnerships">
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://doomout.com/">
-    <meta property="twitter:title" content="Doomout">
+    <meta property="twitter:url" content="https://waypoints.com/">
+    <meta property="twitter:title" content="Waypoints | Navigate Your Future">
+    <meta property="twitter:description" content="Waypoints helps regions grow through innovative solutions and partnerships">
     <link href="images/thumbnail.jpg" rel="apple-touch-icon">
     <link href="images/favicon.ico" rel="shortcut icon">
     <!-- Load Tailwind via CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"/>
-    <!-- Custom CSS file that replaces the old one -->
-    <link rel="stylesheet" href="css/doomout-styles.css">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS file -->
+    <link rel="stylesheet" href="css/waypoints-styles.css">
   </head>
   <body>
   <div class="modal">
-  <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
-  <div class="modal-content">
-    <div class="success">
-      <a href="index.html" class="logo"><img src="images/logodo.png" alt="logo"/></a>
-      <!-- <a href="index.html" >
-          <div class="flip-container">
-              <div class="flipper">
-              <div class="front"></div>
-              <div class="back"></div>
-              </div>
-            </div>
-      </a> -->
-      <h2 class="modal-title first-name" id="title-name"></h2>
-      <p>You're on the list! We'll be in touch.</p>
-      <a href="index.html" class="button">Back home</a>
-    </div>
-    <div class="form-content">
-      <a href="index.html" class="logo"><img src="images/logodo.png" alt="logo"/></a>
-      <!-- <a href="index.html" >
-          <div class="flip-container">
-              <div class="flipper">
-              <div class="front"></div>
-              <div class="back"></div>
-              </div>
+    <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
+    <div class="modal-content">
+      <div class="success">
+        <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+        <h2 class="modal-title first-name" id="title-name"></h2>
+        <p>Thank you for reaching out! We'll be in touch with you shortly to discuss how Waypoints can help your region grow.</p>
+        <a href="index.html" class="button">Back home</a>
+      </div>
+      <div class="form-content">
+        <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+        <h2 class="modal-title">Connect with Waypoints</h2>
+        <p class="modal-subtitle">We're partnering with forward-thinking regions ready for growth. Let's discuss how we can help yours thrive.</p>
+        <form class='form' name='waypointsForm' method='POST'><input type='hidden' name='form-name' value='waypointsForm' />
+          <div class="group">
+            <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="first-name">First name</label>
+            <span class="border"></span>
           </div>
-      </a> -->
-      <h2 class="modal-title">Join the Waypoints Waitlist</h2>
-      <p class="modal-subtitle">We're still in early stages, but we're taking on select partners who are eager to help their regions grow. Join us for the adventure!</p>
-      <form class='form' name='doomoutForm' method='POST'><input type='hidden' name='form-name' value='doomoutForm' />
-        <div class="group">
-          <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
-          <label for="first-name">First name</label>
-          <span class="border"></span>
-        </div>
-        <div class="group">
-          <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
-          <label for="email">Email</label>
-          <span class="border"></span>
-        </div>
-        <button type="submit" class="button">Get in Touch</button>
-      </form>
+          <div class="group">
+            <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+            <label for="email">Email</label>
+            <span class="border"></span>
+          </div>
+          <button type="submit" class="button">Get in Touch</button>
+        </form>
+      </div>
     </div>
   </div>
-</div>
   <div class="content">
-      <a href="index.html" class="logo"><img src="images/logodo.png" alt="logo"/></a>
-
+      <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
 
     <div class="hero">
-      <h1 class="title">Explore</h1>
+      <h1 class="title">Navigate</h1>
       <h1 class="title shift clip">
         <span class="word-shift">
-          <b class="is-visible">Innovation&nbsp;</b>
-          <b>Creativity</b>
-          <b>Technology</b>
+          <b class="is-visible">Growth&nbsp;</b>
+          <b>Innovation</b>
+          <b>Success</b>
         </span>
       </h1>
-      <button class="button modal-toggle">Join the waitlist</button>
-      <!-- <p class="subtitle">Available soon for Mac <img src="images/logo-apple.svg" alt="apple"/></p> -->
+      <p class="subtitle mb-8">Helping regions thrive through strategic partnerships and solutions</p>
+      <button class="button modal-toggle">Connect with Us</button>
     </div>
     <div class="screen-wrapper">
-      <!-- <img src="images/screen.png" class="screen" alt="screen"/> -->
       <div class="outerVideoWrapper2">
       <div class="videoWrapper video">
-          <!-- Copy & Pasted from YouTube -->
+          <!-- Replace with your video link -->
           <div class="videoPadding">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/b-jHGR1qV-0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
       </div>
       </div>
     </div>
 
+    <!-- Features Section -->
+    <div class="features px-6 md:px-10 py-16 max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-serif text-center mb-12">How Waypoints Helps</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="feature-card">
+          <div class="icon-container">
+            <i data-feather="map"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Strategic Planning</h3>
+          <p>We identify growth opportunities tailored to your region's unique strengths and potential.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-container">
+            <i data-feather="users"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Partnership Building</h3>
+          <p>Connect with the right resources, organizations, and stakeholders to drive collective success.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-container">
+            <i data-feather="trending-up"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Sustainable Growth</h3>
+          <p>Develop models that ensure long-term prosperity and resilience for your community.</p>
+        </div>
+      </div>
+    </div>
 
     <footer class="footer">
-      <p>&copy; Waypoints</p>
+      <div class="max-w-5xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center py-6">
+          <div class="mb-4 md:mb-0">
+            <img src="images/logodo.png" alt="Waypoints logo" class="h-8">
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Contact</a>
+            <a href="#" class="text-gray-700 hover:text-gray-900">Privacy</a>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 py-4 text-sm text-center text-gray-600">
+          &copy; 2025 Waypoints. All rights reserved.
+        </div>
+      </div>
     </footer>
-    </div>
   </div>
-  <!-- <script src="./js/jquery/3.4.1/jquery.min.js"></script> -->
-  <script
-  src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-<script src="js/scripts.min.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+  
 <script>
-
-
-  // Close modal on escape key
-  $(document).keyup(function(e) {
-    if (e.key === "Escape") {
-      $('.modal').removeClass('modal-show');
-      $('.content').removeClass('content-blurred');
-      $('body').removeClass('no-scroll');
-    }
-  });
-
   $(function(){
+    // Initialize Feather icons
+    feather.replace();
 
-    // Provider card slider
-    $('.slider').flickity({
-      pauseAutoPlayOnHover: false,
-      prevNextButtons: false,
-      cellAlign: 'center',
-      draggable:  false,
-      freeScroll: false,
-      wrapAround: true,
-      pageDots: false,
-      autoPlay: 3000,
-    });
+    // Word rotation in heading
+    let words = document.querySelectorAll('.word-shift b');
+    let wordIndex = 0;
+    let isAnimating = false;
 
-    // Imbox zero slider
-    $('.zero-slider').flickity({
-      pauseAutoPlayOnHover: false,
-      prevNextButtons: false,
-      cellAlign: 'center',
-      freeScroll: false,
-      wrapAround: false,
-      draggable: false,
-      pageDots: false,
-      autoPlay: 3000,
-      fade: true,
-    });
+    function rotateWord() {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      let currentWord = words[wordIndex];
+      wordIndex = (wordIndex + 1) % words.length;
+      let nextWord = words[wordIndex];
+
+      // Hide current word
+      currentWord.classList.remove('is-visible');
+      
+      // Show next word after a delay
+      setTimeout(function() {
+        nextWord.classList.add('is-visible');
+        isAnimating = false;
+      }, 600);
+    }
+
+    // Rotate words every 3 seconds
+    setInterval(rotateWord, 3000);
 
     // Open & close modal
     $('.modal-toggle').click(function(){
@@ -151,47 +171,43 @@
       $('body').toggleClass('no-scroll');
     });
 
-    // Reserve username form
+    // Close modal on escape key
+    $(document).keyup(function(e) {
+      if (e.key === "Escape") {
+        $('.modal').removeClass('modal-show');
+        $('.content').removeClass('content-blurred');
+        $('body').removeClass('no-scroll');
+      }
+    });
+
+    // Form submission
     $(".form").submit(function(e) {
       e.preventDefault();
       var $form = $(this);
-      $.post($form.attr("action"), $form.serialize()).then(function() {
-        $('.form-content').addClass('form-content-hide');
-        $('.success').addClass('success-show');
-      });
-    });
-
-    // Save user's first name
-    $(".form").submit(function(e) {
-      e.preventDefault();
+      
+      // In a real implementation, you would post to your server
+      // For demo purposes, we'll just show the success message
+      $('.form-content').addClass('form-content-hide');
+      $('.success').addClass('success-show');
+      
+      // Get the first name to personalize thank you message
       var firstName = $("#firstName").val();
-      var email = $("#email").val();
-      const someObject = {
-        name: firstName,
-        email: email
-      }
-      $('.first-name').text("Thank you," + " " + value + "!");
-
+      $('.first-name').text("Thank you, " + firstName + "!");
     });
 
-    // Feather icons
-    feather.replace()
-
-    // ScrollReveal
-    ScrollReveal().reveal('.hero, .title, .video, .screen, .features, .cards, .zero-slider', {
+    // ScrollReveal animations
+    ScrollReveal().reveal('.hero, .title, .subtitle, .video, .screen, .features, .feature-card', {
       distance: '40px',
-      duration: 2000,
-      mobile: false,
+      duration: 1200,
+      delay: 200,
+      easing: 'ease-out',
+      origin: 'bottom',
       reset: false,
-      opacity: 0
+      mobile: true,
+      opacity: 0,
+      interval: 200
     });
-
   });
 </script>
-
-
-
-
 </body>
-
 </html>
