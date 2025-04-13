@@ -296,13 +296,15 @@ form .group input:not(:placeholder-shown) + label {
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
 
-.videoWrapper iframe {
+.videoWrapper iframe,
+.videoWrapper video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border: none;
+  object-fit: cover;
 }
 
 /* -----------------------------------------------------------
