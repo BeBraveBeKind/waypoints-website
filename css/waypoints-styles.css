@@ -169,7 +169,7 @@ body {
   text-align: center;
 }
 
-.logo img {
+.content > .logo img {
   height: 100px;
   width: auto;
 }
