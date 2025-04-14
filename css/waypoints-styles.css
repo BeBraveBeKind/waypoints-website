@@ -402,8 +402,10 @@ form .group input:not(:placeholder-shown) + label {
 .checkbox-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0;
+  margin-bottom: 0.5rem;
   position: relative;
+  flex-direction: row; /* Ensure horizontal layout */
+  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -415,6 +417,7 @@ form .group input:not(:placeholder-shown) + label {
   accent-color: #292524; /* stone-800 */
   position: relative;
   z-index: 1;
+  flex-shrink: 0; /* Prevent checkbox from shrinking */
 }
 
 .checkbox-item label {
@@ -427,6 +430,8 @@ form .group input:not(:placeholder-shown) + label {
   max-width: calc(100% - 30px);
   font-family: 'Inter', sans-serif;
   font-weight: normal;
+  word-break: normal; /* Prevent word breaking */
+  white-space: normal; /* Allow text to wrap naturally within label */
 }
 
 /* -----------------------------------------------------------
