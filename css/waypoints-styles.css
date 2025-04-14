@@ -396,7 +396,7 @@ form .group input:not(:placeholder-shown) + label {
 .checkbox-container {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .checkbox-item {
@@ -418,7 +418,7 @@ form .group input:not(:placeholder-shown) + label {
   flex-shrink: 0;
   width: 18px;
   height: 18px;
-  margin-top: 3px; /* Critical for alignment with text */
+  margin-top: 2px; /* Adjusted for perfeect alignment */
   cursor: pointer;
   appearance: none;
   border: 2px solid #D7D3D0;
@@ -436,9 +436,9 @@ form .group input:not(:placeholder-shown) + label {
 .checkbox-item input[type="checkbox"]:checked:after {
   content: '';
   position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 5px;
+  left: 4px; /*adjusted for better centering */
+  top: 1px; /*adjusted for better centering */
+  width: 6px;
   height: 10px;
   border: solid white;
   border-width: 0 2px 2px 0;
@@ -458,7 +458,7 @@ form .group input:not(:placeholder-shown) + label {
   flex: 1;
   font-family: 'Inter', sans-serif;
   font-weight: normal;
-  padding-top: 0;
+  margin-top: 0;
 }
 
 /* Mobile optimizations */
@@ -470,6 +470,7 @@ form .group input:not(:placeholder-shown) + label {
   .checkbox-item input[type="checkbox"] {
     min-width: 20px;
     height: 20px;
+    margin-top: 0;
   }
   
   .checkbox-item label {
