@@ -27,9 +27,6 @@ body {
 /* -----------------------------------------------------------
    Modal Styles
 ----------------------------------------------------------- */
-/* -----------------------------------------------------------
-   Modal Styles
------------------------------------------------------------ */
 .modal {
   position: fixed;
   inset: 0;
@@ -86,7 +83,7 @@ body {
   border-radius: 0.5rem;
   border: 2px solid #292524; /* stone-800 */
   max-width: 32rem;
-  width: 100%;
+  width: 90%;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
   transform: translateY(10px);
@@ -176,6 +173,7 @@ body {
 
 .form-content {
   transition: opacity 0.4s ease;
+  width: 100%;
 }
 
 .form-content-hide {
@@ -207,7 +205,7 @@ body {
    Hero Section
 ----------------------------------------------------------- */
 .hero {
-  padding-top: 1 rem 1rem 4rem;
+  padding: 1rem 1rem 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -264,7 +262,6 @@ body {
   height: 3.6rem;
   width: 100%;
   min-width: 400px;
-  
 }
 
 .word-shift b {
@@ -381,6 +378,7 @@ form .group input:not(:placeholder-shown) + label {
   top: -0.5rem;
 }
 
+/* Improved Checkbox styling */
 .checkbox-group {
   margin-bottom: 1.5rem;
   width: 100%;
@@ -392,37 +390,43 @@ form .group input:not(:placeholder-shown) + label {
   margin-bottom: 0.75rem;
   display: block;
   text-align: left;
+  font-weight: 500;
 }
 
 .checkbox-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .checkbox-item {
   display: flex;
-  align-items: flex-start; /* Changed from center to flex-start */
-  margin-bottom: 0.5rem; /* Increased from 0.25rem */
+  align-items: flex-start;
+  margin-bottom: 0;
+  position: relative;
 }
 
 .checkbox-item input[type="checkbox"] {
   margin-right: 0.75rem;
-  min-width: 18px; /* Added min-width */
+  min-width: 18px;
   height: 18px;
-  margin-top: 3px; /* Added to align with the text */
+  margin-top: 3px;
   cursor: pointer;
   accent-color: #292524; /* stone-800 */
+  position: relative;
+  z-index: 1;
 }
 
 .checkbox-item label {
   position: static;
   font-size: 0.95rem;
-  line-height: 1.4; /* Added line height */
+  line-height: 1.4;
   color: #57534E; /* stone-600 */
   cursor: pointer;
-  display: inline-block; /* Added display type */
-  max-width: calc(100% - 30px); /* Ensure text wraps properly */
+  display: inline-block;
+  max-width: calc(100% - 30px);
+  font-family: 'Inter', sans-serif;
+  font-weight: normal;
 }
 
 /* -----------------------------------------------------------
@@ -649,6 +653,7 @@ form .group input:not(:placeholder-shown) + label {
 .footer a:hover {
   color: #292524; /* stone-800 */
 }
+
 /* -----------------------------------------------------------
    Utilities (for JS toggling, etc.)
 ----------------------------------------------------------- */
