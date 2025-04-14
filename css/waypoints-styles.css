@@ -82,11 +82,11 @@ body {
 
 .modal-content {
   background: #FAFAF9; /* stone-50 */
-  padding: 1.5rem;
+  padding: 1.75rem;
   border-radius: 0.5rem;
   border: 2px solid #292524; /* stone-800 */
   max-width: 32rem;
-  width: 90%;
+  width: 100%;
   max-height: calc(100vh - 4rem);
   overflow-y: auto;
   transform: translateY(10px);
@@ -166,6 +166,12 @@ body {
 .success-show {
   opacity: 1;
   visibility: visible;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-content {
@@ -337,7 +343,7 @@ body {
    Form Group (for contact form)
 ----------------------------------------------------------- */
 form .group {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   position: relative;
   width: 100%;
 }
@@ -375,16 +381,14 @@ form .group input:not(:placeholder-shown) + label {
   top: -0.5rem;
 }
 
-/* Improved Checkbox styling */
 .checkbox-group {
-  text-align: left;
   margin-bottom: 1.5rem;
   width: 100%;
 }
 
 .checkbox-label {
   font-size: 1rem;
-  color: #57534E;
+  color: #57534E; /* stone-600 */
   margin-bottom: 0.75rem;
   display: block;
   text-align: left;
@@ -398,24 +402,27 @@ form .group input:not(:placeholder-shown) + label {
 
 .checkbox-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 0.25rem;
+  align-items: flex-start; /* Changed from center to flex-start */
+  margin-bottom: 0.5rem; /* Increased from 0.25rem */
 }
 
 .checkbox-item input[type="checkbox"] {
   margin-right: 0.75rem;
-  width: 18px;
+  min-width: 18px; /* Added min-width */
   height: 18px;
+  margin-top: 3px; /* Added to align with the text */
   cursor: pointer;
-  accent-color: #292524;
+  accent-color: #292524; /* stone-800 */
 }
 
 .checkbox-item label {
   position: static;
   font-size: 0.95rem;
-  color: #57534E;
+  line-height: 1.4; /* Added line height */
+  color: #57534E; /* stone-600 */
   cursor: pointer;
-  padding-top: 2px;
+  display: inline-block; /* Added display type */
+  max-width: calc(100% - 30px); /* Ensure text wraps properly */
 }
 
 /* -----------------------------------------------------------
