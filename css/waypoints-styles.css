@@ -396,44 +396,40 @@ form .group input:not(:placeholder-shown) + label {
 .checkbox-container {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 0.5rem;
+  gap: 0.75rem;
 }
 
 .checkbox-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   position: relative;
-  flex-direction: row; /* Ensure horizontal layout */
-  flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 .checkbox-item:hover {
-  background-color: rgba(41, 37, 36, 0.05); /* Very light background on hover */
+  background-color: rgba(41, 37, 36, 0.05);
   border-radius: 4px;
+  padding: 2px;
+  margin: -2px 0 calc(0.5rem - 2px) -2px;
 }
+
 .checkbox-item input[type="checkbox"] {
   margin-right: 0.75rem;
-  min-width: 18px;
-  height: 18px;
-  margin-top: .25rem;
-  cursor: pointer;
-  accent-color: #292524; /* stone-800 */
-  position: relative;
-  appearance: none;
+  flex-shrink: 0;
   width: 18px;
   height: 18px;
+  margin-top: 3px; /* Critical for alignment with text */
+  cursor: pointer;
+  appearance: none;
   border: 2px solid #D7D3D0;
   border-radius: 3px;
   transition: all 0.2s ease;
   background-color: #FAFAF9;
-  z-index: 1;
-  flex-shrink: 0; /* Prevent checkbox from shrinking */
+  position: relative;
 }
 
 .checkbox-item input[type="checkbox"]:checked {
-  background-color: #92400E; /* Your yellow-800 brand color */
+  background-color: #92400E;
   border-color: #92400E;
 }
 
@@ -455,21 +451,31 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 .checkbox-item label {
-  position: static;
   font-size: 0.95rem;
   line-height: 1.4;
   color: #57534E; /* stone-600 */
   cursor: pointer;
-  display: inline-block;
   flex: 1;
-  padding-top: 0.125rem;
-  max-width: calc(100% - 30px);
   font-family: 'Inter', sans-serif;
   font-weight: normal;
-  word-break: normal; /* Prevent word breaking */
-  white-space: normal; /* Allow text to wrap naturally within label */
+  padding-top: 0;
 }
 
+/* Mobile optimizations */
+@media (max-width: 767px) {
+  .checkbox-item {
+    padding: 0.25rem 0;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    min-width: 20px;
+    height: 20px;
+  }
+  
+  .checkbox-item label {
+    font-size: 1rem;
+  }
+}
 /* -----------------------------------------------------------
    Video Wrapper
 ----------------------------------------------------------- */
