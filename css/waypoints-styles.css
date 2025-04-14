@@ -375,35 +375,47 @@ form .group input:not(:placeholder-shown) + label {
   top: -0.5rem;
 }
 
-/* Checkbox styling */
+/* Improved Checkbox styling */
 .checkbox-group {
   text-align: left;
   margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .checkbox-label {
   font-size: 1rem;
-  color: #57534E; /* stone-600 */
-  margin-bottom: 0.5rem;
+  color: #57534E;
+  margin-bottom: 0.75rem;
+  display: block;
+  text-align: left;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .checkbox-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 
 .checkbox-item input[type="checkbox"] {
-  margin-right: 0.5rem;
-  width: auto;
+  margin-right: 0.75rem;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
+  accent-color: #292524;
 }
 
 .checkbox-item label {
   position: static;
-  font-size: 1rem;
-  color: #57534E; /* stone-600 */
+  font-size: 0.95rem;
+  color: #57534E;
   cursor: pointer;
+  padding-top: 2px;
 }
 
 /* -----------------------------------------------------------
