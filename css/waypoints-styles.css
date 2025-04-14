@@ -854,6 +854,17 @@ form .group input:not(:placeholder-shown) + label {
 }
 
 /* Media queries */
+@media (max-width: 767px) {
+  .checkbox-item {
+    padding: 0.5rem 0;
+  }
+  
+  .checkbox-item input[type="checkbox"] {
+    min-width: 20px;
+    height: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .title {
     font-size: 4rem;
