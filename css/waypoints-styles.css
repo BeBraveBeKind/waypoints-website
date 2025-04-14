@@ -401,7 +401,7 @@ form .group input:not(:placeholder-shown) + label {
 
 .checkbox-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 0;
   position: relative;
 }
@@ -410,7 +410,7 @@ form .group input:not(:placeholder-shown) + label {
   margin-right: 0.75rem;
   min-width: 18px;
   height: 18px;
-  margin-top: 3px;
+  margin-top: 0;
   cursor: pointer;
   accent-color: #292524; /* stone-800 */
   position: relative;
