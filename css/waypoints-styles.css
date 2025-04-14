@@ -375,6 +375,37 @@ form .group input:not(:placeholder-shown) + label {
   top: -0.5rem;
 }
 
+/* Checkbox styling */
+.checkbox-group {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.checkbox-label {
+  font-size: 1rem;
+  color: #57534E; /* stone-600 */
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 0.5rem;
+  width: auto;
+  cursor: pointer;
+}
+
+.checkbox-item label {
+  position: static;
+  font-size: 1rem;
+  color: #57534E; /* stone-600 */
+  cursor: pointer;
+}
+
 /* -----------------------------------------------------------
    Video Wrapper
 ----------------------------------------------------------- */
