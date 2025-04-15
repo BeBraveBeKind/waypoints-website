@@ -61,40 +61,32 @@
           <h2 class="modal-title">Connect with Waypoints</h2>
           <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
           <!-- Updated form with Formspree structure -->
-          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST" id="contactForm">
-            <!-- Input for the user's first name -->
+          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
             <div class="group">
               <input type="text" id="firstName" name="firstName" placeholder="&nbsp;" autocomplete="off" required>
               <label for="firstName">First name</label>
               <span class="border"></span>
             </div>
-            <!-- Input for the user's email address -->
             <div class="group">
               <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
               <label for="email">Email</label>
               <span class="border"></span>
             </div>
-            <!-- Checkbox group for user interests -->
             <div class="group checkbox-group">
               <p class="checkbox-label">I'm interested in:</p>
               <div class="checkbox-container">
-                <!-- Checkbox for partnering with Waypoints -->
                 <div class="checkbox-item">
-                  <input type="checkbox" id="interest-partner" name="interest[]" value="Partner">
+                  <input type="checkbox" id="interest-partner" name="interest" value="Partner">
                   <label for="interest-partner">Partner with us for local promotion</label>
                 </div>
-                <!-- Checkbox for joining as a user -->
                 <div class="checkbox-item">
-                  <input type="checkbox" id="interest-user" name="interest[]" value="User">
+                  <input type="checkbox" id="interest-user" name="interest" value="User">
                   <label for="interest-user">Join as a user</label>
                 </div>
               </div>
             </div>
-            <!-- Hidden input to set the email subject -->
-            <input type="hidden" name="_subject" id="subjectField" value="New Waypoints Contact">
-            <!-- Hidden input to redirect the user after form submission -->
+            <input type="hidden" name="_subject" value="New Waypoints Contact">
             <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
-            <!-- Submit button for the form -->
             <button type="submit" class="button">Get in Touch</button>
           </form>
         </div>
