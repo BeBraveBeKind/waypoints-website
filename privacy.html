@@ -62,6 +62,52 @@
     </style>
   </head>
   <body>
+    <div class="modal">
+      <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
+      <div class="modal-content">
+        <div class="success">
+          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+          <h2 class="modal-title first-name" id="title-name"></h2>
+          <p>Thank you for reaching out! We'll be in touch with you shortly to discuss how Waypoints can help your local community.</p>
+          <a href="index.html" class="button">Back home</a>
+        </div>
+        <div class="form-content">
+          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+          <h2 class="modal-title">Connect with Waypoints</h2>
+          <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
+          <!-- Form for contact -->
+          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
+            <div class="group">
+              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
+              <label for="firstName">First name</label>
+              <span class="border"></span>
+            </div>
+            <div class="group">
+              <input type="email" name="email" id="email" placeholder="&nbsp;" autocomplete="off" required>
+              <label for="email">Email</label>
+              <span class="border"></span>
+            </div>
+            <div class="group checkbox-group">
+              <p class="checkbox-label">I'm interested in:</p>
+              <div class="checkbox-container">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="interest-partner" name="interest-partner" value="Partner">
+                  <label for="interest-partner">Partner with us for local promotion</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="interest-user" name="interest-user" value="User">
+                  <label for="interest-user">Join as a user</label>
+                </div>
+              </div>
+            </div>
+            <input type="hidden" name="_subject" value="New Waypoints Contact">
+            <input type="hidden" name="_next" value="https://mywaypoints.app/?thank-you=true">
+            <button type="submit" class="button">Get in Touch</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
     <div class="content">
       <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
       
@@ -98,6 +144,7 @@
           <h3>2.4 Cookies and Tracking Technologies</h3>
           <ul>
             <li>We use cookies and similar tracking technologies to enhance your user experience</li>
+            <li>This includes Google Analytics which helps us understand how visitors interact with our website</li>
           </ul>
           
           <h2>3. Fitness Platform Integration & Activity Data</h2>
@@ -224,7 +271,7 @@
         <div class="max-w-5xl mx-auto px-6">
           <div class="flex flex-col md:flex-row justify-between items-center py-6">
             <div class="mb-4 md:mb-0">
-              <img src="images/logodo.png" alt="Waypoints logo" class="h-14">
+              <img src="images/logodo.png" alt="Waypoints logo" style="height: 100px; width: auto;">
             </div>
             <div class="flex space-x-6">
               <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
@@ -245,20 +292,14 @@
       $(function(){
         // Initialize Feather icons
         feather.replace();
-      });
-          // Track form submissions to monitor user engagement and measure the effectiveness of the contact form.
-        // This data is sent to Google Analytics for analysis and reporting purposes.
-        $(".form").submit(function(e) {
-          e.preventDefault(); // Prevent default form submission
-          gtag('event', 'form_submit', {
-            'event_category': 'Conversion',
-            'event_label': 'Contact Form'
-          });
-          // Allow form submission after a short delay to ensure the event is sent
-          // Track modal opens to analyze user engagement with the contact form.
-          // This data helps improve user experience by identifying how often users interact with the modal.
-          // Allow form submission after a short delay to ensure the event is sent
+        
+        // Open & close modal
         $('.modal-toggle').click(function(){
+          $('.modal').toggleClass('modal-show');
+          $('.content').toggleClass('content-blurred');
+          $('body').toggleClass('no-scroll');
+          
+          // Track modal opens for analytics
           if (!$('.modal').hasClass('modal-show')) {
             gtag('event', 'modal_open', {
               'event_category': 'Engagement',
@@ -266,12 +307,47 @@
             });
           }
         });
-        $('.modal-toggle').click(function(){
-          gtag('event', 'modal_open', {
-            'event_category': 'Engagement',
+        
+        // Close modal on escape key
+        $(document).keyup(function(e) {
+          if (e.key === "Escape") {
+            $('.modal').removeClass('modal-show');
+            $('.content').removeClass('content-blurred');
+            $('body').removeClass('no-scroll');
+          }
+        });
+        
+        // Form submission
+        $(".form").submit(function() {
+          // Track form submissions
+          gtag('event', 'form_submit', {
+            'event_category': 'Conversion',
             'event_label': 'Contact Form'
           });
+          
+          // Get the first name to personalize thank you message
+          var firstName = $("#firstName").val();
+          $('.first-name').text("Thank you, " + firstName + "!");
+          
+          // Only show the success UI immediately if we're in development
+          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+            e.preventDefault();
+            $('.form-content').addClass('form-content-hide');
+            $('.success').addClass('success-show');
+          }
         });
+        
+        // Check for thank-you parameter in URL to show success message
+        $(document).ready(function() {
+          if (window.location.search.includes('thank-you=true')) {
+            $('.modal').addClass('modal-show');
+            $('.content').addClass('content-blurred');
+            $('body').addClass('no-scroll');
+            $('.form-content').addClass('form-content-hide');
+            $('.success').addClass('success-show');
+          }
+        });
+      });
     </script>
   </body>
 </html>

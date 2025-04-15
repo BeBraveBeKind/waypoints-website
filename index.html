@@ -181,7 +181,6 @@
   
     <script>
       $(function(){
-        
         // Initialize Feather icons
         feather.replace();
 
@@ -263,22 +262,18 @@
           reset: false,
           mobile: true,
           opacity: 0,
-          interval: 200,
-          } 
+          interval: 200
         });
         
-        // Track form submissions to monitor user engagement and measure the effectiveness of the contact form.
-        // This data is sent to Google Analytics for analysis and reporting purposes.
-        $(".form").submit(function(e) {
-          e.preventDefault(); // Prevent default form submission
+        // Track form submissions
+        $(".form").submit(function() {
           gtag('event', 'form_submit', {
             'event_category': 'Conversion',
             'event_label': 'Contact Form'
           });
-          // Allow form submission after a short delay to ensure the event is sent
-          // Track modal opens to analyze user engagement with the contact form.
-          // This data helps improve user experience by identifying how often users interact with the modal.
-          // Allow form submission after a short delay to ensure the event is sent
+        });
+
+        // Track modal opens
         $('.modal-toggle').click(function(){
           if (!$('.modal').hasClass('modal-show')) {
             gtag('event', 'modal_open', {
@@ -286,12 +281,6 @@
               'event_label': 'Modal Open'
             });
           }
-        });
-        $('.modal-toggle').click(function(){
-          gtag('event', 'modal_open', {
-            'event_category': 'Engagement',
-            'event_label': 'Contact Form'
-          });
         });
 
         // Track video interaction
