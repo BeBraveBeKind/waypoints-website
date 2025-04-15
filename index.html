@@ -15,17 +15,17 @@
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://waypoints.com/">
+    <meta property="og:url" content="https://mywaypoints.app/">
     <meta property="og:title" content="Waypoints | Local Trail Connections for Communities">
     <meta property="og:description" content="We help communities connect their local trail systems with nearby businesses to create authentic regional experiences.">
-    <meta property="og:image" content="https://waypoints.com/images/waypoints-og-image.jpg">
+    <meta property="og:image" content="https://mywaypoints.app/images/waypoints-og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://waypoints.com/">
+    <meta property="twitter:url" content="https://mywaypoints.app/">
     <meta property="twitter:title" content="Waypoints | Local Trail Discovery">
     <meta property="twitter:description" content="We help communities connect their local trail systems with nearby businesses to create authentic regional experiences.">
-    <meta property="twitter:image" content="https://waypoints.com/images/waypoints-twitter-image.jpg">
+    <meta property="twitter:image" content="https://mywaypoints.app/images/waypoints-twitter-image.jpg">
 
     <!-- Favicon and Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -34,7 +34,7 @@
     <link rel="manifest" href="site.webmanifest">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://waypoints.com/">
+    <link rel="canonical" href="https://mywaypoints.app/">
     <link href="images/thumbnail.jpg" rel="apple-touch-icon">
     <link href="images/favicon.ico" rel="shortcut icon">
     <!-- Load Tailwind via CDN -->
@@ -60,10 +60,10 @@
           <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
           <h2 class="modal-title">Connect with Waypoints</h2>
           <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
-          <!-- Updated form with Formspree structure -->
+          <!-- Updated form with correct field names for Formspree -->
           <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
             <div class="group">
-              <input type="text" id="firstName" name="firstName" placeholder="&nbsp;" autocomplete="off" required>
+              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
               <label for="firstName">First name</label>
               <span class="border"></span>
             </div>
@@ -76,17 +76,17 @@
               <p class="checkbox-label">I'm interested in:</p>
               <div class="checkbox-container">
                 <div class="checkbox-item">
-                  <input type="checkbox" id="interest-partner" name="interest" value="Partner">
+                  <input type="checkbox" id="interest-partner" name="interest-partner" value="Partner">
                   <label for="interest-partner">Partner with us for local promotion</label>
                 </div>
                 <div class="checkbox-item">
-                  <input type="checkbox" id="interest-user" name="interest" value="User">
+                  <input type="checkbox" id="interest-user" name="interest-user" value="User">
                   <label for="interest-user">Join as a user</label>
                 </div>
               </div>
             </div>
             <input type="hidden" name="_subject" value="New Waypoints Contact">
-            <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
+            <input type="hidden" name="_next" value="https://mywaypoints.app/?thank-you=true">
             <button type="submit" class="button">Get in Touch</button>
           </form>
         </div>
@@ -217,25 +217,19 @@
           }
         });
 
-        // Form submission handling
+        // Form submission
         $(".form").submit(function(e) {
+          // Get the first name to personalize thank you message
           var firstName = $("#firstName").val();
+          $('.first-name').text("Thank you, " + firstName + "!");
           
-          // Store the first name for the thank you message
-          if (firstName) {
-            $('.first-name').text("Thank you, " + firstName + "!");
-          }
-          
-          // If we're in local development, prevent the default form submission
-          // and show success UI immediately
+          // Only show the success UI immediately if we're in development
+          // In production, Formspree will handle the redirect
           if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
             e.preventDefault();
             $('.form-content').addClass('form-content-hide');
             $('.success').addClass('success-show');
           }
-          
-          // For production, Formspree will handle the redirect to the thank-you page
-          // No need to prevent default - let the form submit normally
         });
         
         // Check for thank-you parameter in URL to show success message
