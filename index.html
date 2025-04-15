@@ -60,32 +60,41 @@
           <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
           <h2 class="modal-title">Connect with Waypoints</h2>
           <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
-          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
+          <!-- Updated form with Formspree structure -->
+          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST" id="contactForm">
+            <!-- Input for the user's first name -->
             <div class="group">
-              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="first-name">First name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="&nbsp;" autocomplete="off" required>
+              <label for="firstName">First name</label>
               <span class="border"></span>
             </div>
+            <!-- Input for the user's email address -->
             <div class="group">
               <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
               <label for="email">Email</label>
               <span class="border"></span>
             </div>
+            <!-- Checkbox group for user interests -->
             <div class="group checkbox-group">
               <p class="checkbox-label">I'm interested in:</p>
               <div class="checkbox-container">
+                <!-- Checkbox for partnering with Waypoints -->
                 <div class="checkbox-item">
-                  <input type="checkbox" id="partner" name="interest-partner" value="Partner">
-                  <label for="partner">Partner with us for local promotion</label>
+                  <input type="checkbox" id="interest-partner" name="interest[]" value="Partner">
+                  <label for="interest-partner">Partner with us for local promotion</label>
                 </div>
+                <!-- Checkbox for joining as a user -->
                 <div class="checkbox-item">
-                  <input type="checkbox" id="user" name="interest-user" value="User">
-                  <label for="user">Join as a user</label>
+                  <input type="checkbox" id="interest-user" name="interest[]" value="User">
+                  <label for="interest-user">Join as a user</label>
                 </div>
               </div>
             </div>
-            <input type="hidden" name="_subject" value="New Waypoints Contact">
+            <!-- Hidden input to set the email subject -->
+            <input type="hidden" name="_subject" id="subjectField" value="New Waypoints Contact">
+            <!-- Hidden input to redirect the user after form submission -->
             <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
+            <!-- Submit button for the form -->
             <button type="submit" class="button">Get in Touch</button>
           </form>
         </div>
@@ -217,20 +226,54 @@
       }
     });
 
-    // Form submission
-  $(".form").submit(function(e) {
-    // Don't prevent the form from submitting by default
-    
-    // Get the first name to personalize thank you message
-    var firstName = $("#firstName").val();
-    $('.first-name').text("Thank you, " + firstName + "!");
-    
-    // Only show the success UI immediately if we're in development
-    // In production, Formspree will handle the redirect
-    if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-      e.preventDefault();
-      $('.form-content').addClass('form-content-hide');
-      $('.success').addClass('success-show');
+    // Dynamically set the subject field based on form context
+    $("#contactForm").on("focusin", function() {
+      const subjectField = $("#subjectField");
+      if (subjectField.length) {
+        subjectField.val("Contact Form Submission - " + $("#firstName").val());
+      }
+    });
+
+    // Form submission with validation
+  $("#contactForm").submit(function(e) {
+    e.preventDefault(); // Prevent default form submission
+
+    // Validate form fields
+    let isValid = true;
+    const firstName = $("#firstName").val().trim();
+    const email = $("input[name='email']").val().trim();
+
+    if (!firstName) {
+      alert("Please enter your first name.");
+      isValid = false;
+    }
+
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("Please enter a valid email address.");
+      isValid = false;
+    }
+        success: function() {
+          $('.first-name').text("Thank you, " + firstName + "!");
+          $('.form-content').addClass('form-content-hide');
+          $('.success').addClass('success-show');
+          setTimeout(function() {
+            window.location.href = "https://waypoints.com/?thank-you=true";
+          }, 2000); // Redirect after 2 seconds
+        },
+        error: function() {
+          alert("There was an error submitting the form. Please try again later.");
+          // Fallback: Show a message or keep the user on the current page
+          $('.form-content').append('<p class="error-message">We could not redirect you. Please check your email for confirmation.</p>');
+        }
+        success: function() {
+          $('.first-name').text("Thank you, " + firstName + "!");
+          $('.form-content').addClass('form-content-hide');
+          $('.success').addClass('success-show');
+        },
+        error: function() {
+          alert("There was an error submitting the form. Please try again later.");
+        }
+      });
     }
   });
   
