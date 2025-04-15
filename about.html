@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NCS464PLKQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-NCS464PLKQ');
+</script>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -204,6 +213,33 @@
             $('.form-content').addClass('form-content-hide');
             $('.success').addClass('success-show');
           }
+        });
+
+            // Track form submissions to monitor user engagement and measure the effectiveness of the contact form.
+        // This data is sent to Google Analytics for analysis and reporting purposes.
+        $(".form").submit(function(e) {
+          e.preventDefault(); // Prevent default form submission
+          gtag('event', 'form_submit', {
+            'event_category': 'Conversion',
+            'event_label': 'Contact Form'
+          });
+          // Allow form submission after a short delay to ensure the event is sent
+          // Track modal opens to analyze user engagement with the contact form.
+          // This data helps improve user experience by identifying how often users interact with the modal.
+          // Allow form submission after a short delay to ensure the event is sent
+        $('.modal-toggle').click(function(){
+          if (!$('.modal').hasClass('modal-show')) {
+            gtag('event', 'modal_open', {
+              'event_category': 'Engagement',
+              'event_label': 'Modal Open'
+            });
+          }
+        });
+        $('.modal-toggle').click(function(){
+          gtag('event', 'modal_open', {
+            'event_category': 'Engagement',
+            'event_label': 'Contact Form'
+          });
         });
       });
     </script>
