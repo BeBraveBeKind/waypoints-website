@@ -124,19 +124,32 @@
           <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
           <h2 class="modal-title">Connect with Waypoints</h2>
           <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
-          <form class='form' action="https://formspree.io/f/michael@mywaypoints.app" method="POST">
+          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
             <div class="group">
               <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="first-name">First name</label>
+              <label for="firstName">First name</label>
               <span class="border"></span>
             </div>
             <div class="group">
-              <input type="email" name="email" placeholder="&nbsp;" autocomplete="off" required>
+              <input type="email" name="email" id="email" placeholder="&nbsp;" autocomplete="off" required>
               <label for="email">Email</label>
               <span class="border"></span>
             </div>
+            <div class="group checkbox-group">
+              <p class="checkbox-label">I'm interested in:</p>
+              <div class="checkbox-container">
+                <div class="checkbox-item">
+                  <input type="checkbox" id="interest-partner" name="interest-partner" value="Partner">
+                  <label for="interest-partner">Partner with us for local promotion</label>
+                </div>
+                <div class="checkbox-item">
+                  <input type="checkbox" id="interest-user" name="interest-user" value="User">
+                  <label for="interest-user">Join as a user</label>
+                </div>
+              </div>
+            </div>
             <input type="hidden" name="_subject" value="New Waypoints Contact">
-            <input type="hidden" name="_next" value="https://waypoints.com/?thank-you=true">
+            <input type="hidden" name="_next" value="https://mywaypoints.app/?thank-you=true">
             <button type="submit" class="button">Get in Touch</button>
           </form>
         </div>
