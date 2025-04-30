@@ -41,6 +41,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Tailwind CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://mywaypoints.app/">
@@ -55,242 +58,134 @@
     <!-- Custom CSS file -->
     <link rel="stylesheet" href="css/waypoints-styles.css">
   </head>
-  <body>
-    <div class="modal">
-      <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
-      <div class="modal-content">
-        <div class="success">
-          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
-          <h2 class="modal-title first-name" id="title-name"></h2>
-          <p>Thank you for reaching out! We'll be in touch with you shortly to discuss how Waypoints can help your local community.</p>
-          <a href="index.html" class="button">Back home</a>
-        </div>
-        <div class="form-content">
-          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
-          <h2 class="modal-title">Connect with Waypoints</h2>
-          <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
-          <!-- Updated form with correct field names for Formspree -->
-          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
-            <div class="group">
-              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="firstName">First name</label>
-              <span class="border"></span>
-            </div>
-            <div class="group">
-              <input type="email" name="email" id="email" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="email">Email</label>
-              <span class="border"></span>
-            </div>
-            <div class="group checkbox-group">
-              <p class="checkbox-label">I'm interested in:</p>
-              <div class="checkbox-container">
-                <div class="checkbox-item">
-                  <input type="checkbox" id="interest-partner" name="interest-partner" value="Partner">
-                  <label for="interest-partner">Partner with us for local promotion</label>
-                </div>
-                <div class="checkbox-item">
-                  <input type="checkbox" id="interest-user" name="interest-user" value="User">
-                  <label for="interest-user">Join as a user</label>
-                </div>
-              </div>
-            </div>
-            <input type="hidden" name="_subject" value="New Waypoints Contact">
-            <input type="hidden" name="_next" value="https://mywaypoints.app/?thank-you=true">
-            <button type="submit" class="button">Get in Touch</button>
-          </form>
-        </div>
+  <body class="font-sans text-gray-900 bg-white">
+    <!-- Hero Section -->
+    <section class="bg-white py-24 text-center px-6">
+      <span class="inline-block bg-amber-100 text-amber-800 px-4 py-1 text-sm font-semibold rounded-full mb-4">
+        Outdoor Rewards Platform
+      </span>
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight font-serif">
+        Track your activity. Earn rewards.
+      </h1>
+      <p class="mt-6 max-w-xl mx-auto text-lg text-gray-600">
+        Whether you hike, ride, or run — WayPoints connects your favorite fitness app to exclusive perks from local businesses.
+      </p>
+      <div class="mt-10 flex justify-center gap-4 flex-wrap">
+        <a href="/early-access.html#contact" class="bg-amber-700 text-white px-6 py-3 rounded-md font-semibold hover:bg-amber-800 transition">
+          Get Early Access
+        </a>
+        <a href="/partners.html#contact" class="border border-amber-700 text-amber-700 px-6 py-3 rounded-md font-semibold hover:bg-amber-50 transition">
+          Partner With Us
+        </a>
       </div>
-    </div>
-    <div class="content">
-      <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
-
-      <div class="hero">
-        <h1 class="title">Discover</h1>
-        <h1 class="title shift clip">
-          <span class="word-shift">
-            <b class="is-visible">Adventure&nbsp;</b>
-            <b>Community</b>
-            <b>Rewards</b>
-          </span>
-        </h1>
-        <p class="subtitle mb-8">Where Active Lifestyles Meet Local Commerce</p>
-        <button class="button modal-toggle">Connect with Us</button>
-      </div>
-      <div class="screen-wrapper">
-        <div class="outerVideoWrapper2">
-          <div class="videoWrapper video">
-            <!-- YouTube embedded video -->
-            <div class="videoPadding">
-              <iframe width="560" height="315" src="https://youtube.com/embed/7SJm-Qxq5Os" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Features Section -->
-      <div class="features px-6 md:px-10 py-16 max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-serif text-center mb-12">How Waypoints Helps</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="feature-card">
-            <div class="icon-container">
-              <i data-feather="map"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Local Trail Discovery</h3>
-            <p>We help trail users discover hidden gems in your community by highlighting routes that connect to local businesses and points of interest.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon-container">
-              <i data-feather="users"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Community Connections</h3>
-            <p>Build relationships between trail users and local merchants through small-scale rewards that create authentic hometown experiences.</p>
-          </div>
-          <div class="feature-card">
-            <div class="icon-container">
-              <i data-feather="trending-up"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Regional Impact</h3>
-            <p>Drive foot traffic to small businesses by highlighting the unique charm and character that makes your community special.</p>
-          </div>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="max-w-5xl mx-auto px-6">
-          <div class="flex flex-col md:flex-row justify-between items-center py-6">
-            <div class="mb-4 md:mb-0">
-              <img src="images/logodo.png" alt="Waypoints logo" style="height: 100px; width: auto;">
-            </div>
-            <div class="flex space-x-6">
-              <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
-              <a href="#" class="text-gray-700 hover:text-gray-900 modal-toggle">Contact</a>
-              <a href="privacy.html" class="text-gray-700 hover:text-gray-900">Privacy</a>
-            </div>
-          </div>
-          <div class="border-t border-gray-200 py-4 text-sm text-center text-gray-600">
-            &copy; 2025 Waypoints. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
+    </section>
   
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <!-- Stats -->
+    <section class="bg-gray-50 py-16">
+      <div class="max-w-5xl mx-auto px-6 grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="text-3xl font-bold text-amber-700 font-serif">75+</p>
+          <p class="text-sm text-gray-600">Routes Published</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-amber-700 font-serif">2000+</p>
+          <p class="text-sm text-gray-600">Rewards Claimed</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-amber-700 font-serif">93%</p>
+          <p class="text-sm text-gray-600">Completion Rate</p>
+        </div>
+        <div>
+          <p class="text-3xl font-bold text-amber-700 font-serif">4.9/5</p>
+          <p class="text-sm text-gray-600">User Satisfaction</p>
+        </div>
+      </div>
+    </section>
   
-    <script>
-      $(function(){
-        // Initialize Feather icons
-        feather.replace();
-
-        // Word rotation in heading
-        let words = document.querySelectorAll('.word-shift b');
-        let wordIndex = 0;
-        let isAnimating = false;
-
-        function rotateWord() {
-          if (isAnimating) return;
-          isAnimating = true;
-
-          let currentWord = words[wordIndex];
-          wordIndex = (wordIndex + 1) % words.length;
-          let nextWord = words[wordIndex];
-
-          // Hide current word
-          currentWord.classList.remove('is-visible');
-          
-          // Show next word after a delay
-          setTimeout(function() {
-            nextWord.classList.add('is-visible');
-            isAnimating = false;
-          }, 600);
-        }
-
-        // Rotate words every 3 seconds
-        setInterval(rotateWord, 3000);
-
-        // Open & close modal
-        $('.modal-toggle').click(function(){
-          $('.modal').toggleClass('modal-show');
-          $('.content').toggleClass('content-blurred');
-          $('body').toggleClass('no-scroll');
-        });
-
-        // Close modal on escape key
-        $(document).keyup(function(e) {
-          if (e.key === "Escape") {
-            $('.modal').removeClass('modal-show');
-            $('.content').removeClass('content-blurred');
-            $('body').removeClass('no-scroll');
-          }
-        });
-
-        // Form submission
-        $(".form").submit(function(e) {
-          // Get the first name to personalize thank you message
-          var firstName = $("#firstName").val();
-          $('.first-name').text("Thank you, " + firstName + "!");
-          
-          // Only show the success UI immediately if we're in development
-          // In production, Formspree will handle the redirect
-          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-            e.preventDefault();
-            $('.form-content').addClass('form-content-hide');
-            $('.success').addClass('success-show');
-          }
-        });
-        
-        // Check for thank-you parameter in URL to show success message
-        $(document).ready(function() {
-          if (window.location.search.includes('thank-you=true')) {
-            $('.modal').addClass('modal-show');
-            $('.content').addClass('content-blurred');
-            $('body').addClass('no-scroll');
-            $('.form-content').addClass('form-content-hide');
-            $('.success').addClass('success-show');
-          }
-        });
-
-        // ScrollReveal animations
-        ScrollReveal().reveal('.hero, .title, .subtitle, .video, .screen, .features, .feature-card', {
-          distance: '40px',
-          duration: 1200,
-          delay: 200,
-          easing: 'ease-out',
-          origin: 'bottom',
-          reset: false,
-          mobile: true,
-          opacity: 0,
-          interval: 200
-        });
-        
-        // Track form submissions
-        $(".form").submit(function() {
-          gtag('event', 'form_submit', {
-            'event_category': 'Conversion',
-            'event_label': 'Contact Form'
-          });
-        });
-
-        // Track modal opens
-        $('.modal-toggle').click(function(){
-          if (!$('.modal').hasClass('modal-show')) {
-            gtag('event', 'modal_open', {
-              'event_category': 'Engagement',
-              'event_label': 'Modal Open'
-            });
-          }
-        });
-
-        // Track video interaction
-        $('.video iframe').on('load', function() {
-          gtag('event', 'video_loaded', {
-            'event_category': 'Engagement',
-            'event_label': 'Promotional Video'
-          });
-        });
-      });
-    </script>
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-white">
+      <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-serif font-bold mb-10">How It Works</h2>
+        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+          <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+            <h3 class="font-serif font-semibold mb-2">1. Join</h3>
+            <p class="text-sm text-gray-600">Create a free account and connect your fitness app — Strava, Garmin, or Apple Health.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+            <h3 class="font-serif font-semibold mb-2">2. Choose Adventure</h3>
+            <p class="text-sm text-gray-600">Pick from curated outdoor routes — hike, run, or ride at your own pace.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+            <h3 class="font-serif font-semibold mb-2">3. Get Verified</h3>
+            <p class="text-sm text-gray-600">WayPoints verifies your activity using GPS data — no manual uploads needed.</p>
+          </div>
+          <div class="p-6 bg-gray-50 rounded-lg shadow-md">
+            <h3 class="font-serif font-semibold mb-2">4. Unlock Rewards</h3>
+            <p class="text-sm text-gray-600">Earn real perks from local businesses — coffee, beer, gear, and more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Video Section -->
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-2xl font-serif font-semibold mb-6">See WayPoints in Action</h2>
+        <div class="aspect-w-16 aspect-h-9 w-full h-96 mx-auto">
+          <iframe class="w-full h-full rounded-lg shadow-md"
+            src="https://youtube.com/embed/7SJm-Qxq5Os"
+            title="WayPoints Promo Video"
+            frameborder="0"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Audience Benefits -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-serif font-bold text-center mb-12">Who It's For</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-amber-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold font-serif mb-2">For Adventurers</h3>
+            <p class="text-gray-700 text-sm">
+              Discover new routes, track your progress, and earn rewards. Whether you ride solo or explore with friends, your movement counts.
+            </p>
+          </div>
+          <div class="bg-blue-50 p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-semibold font-serif mb-2">For Partners</h3>
+            <p class="text-gray-700 text-sm">
+              Bring outdoor enthusiasts into your business. Launch campaigns that reward activity and drive foot traffic to your location.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- CTA -->
+    <section class="py-20 bg-amber-700 text-white text-center">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-3xl font-serif font-bold mb-4">Ready to explore?</h2>
+        <p class="mb-6 text-lg">Join the movement that rewards your adventure — and builds stronger local communities.</p>
+        <div class="flex justify-center gap-4 flex-wrap">
+          <a href="/early-access.html#contact" class="bg-white text-amber-700 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition">
+            Get Early Access
+          </a>
+          <a href="/partners.html#contact" class="border border-white px-6 py-3 rounded-md font-semibold hover:bg-white hover:text-amber-700 transition">
+            Become a Partner
+          </a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-10 text-center text-sm text-gray-600">
+      <p>&copy; 2025 WayPoints. All rights reserved.</p>
+      <div class="mt-4 flex justify-center gap-6 text-sm">
+        <a href="/about.html" class="hover:text-gray-900">About</a>
+        <a href="/privacy.html" class="hover:text-gray-900">Privacy</a>
+        <a href="/early-access.html#contact" class="hover:text-gray-900">Get in Touch</a>
+      </div>
+    </footer>
   </body>
 </html>
