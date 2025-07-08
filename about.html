@@ -1,233 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NCS464PLKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCS464PLKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-NCS464PLKQ');
+  </script>
 
-  gtag('config', 'G-NCS464PLKQ');
-</script>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title>About Waypoints | Our Roots and Mission</title>
-    <meta name="title" content="About Waypoints | Our Mission and Team">
-    <meta name="description" content="Learn about Waypoints' mission to help communities celebrate their local trails and connect outdoor enthusiasts with neighborhood businesses.">
-    <link href="images/thumbnail.jpg" rel="apple-touch-icon">
-    <link href="images/favicon.ico" rel="shortcut icon">
-    <!-- Load Tailwind via CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"/>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
-    <!-- Custom CSS file -->
-    <link rel="stylesheet" href="css/waypoints-styles.css">
-  </head>
-  <body>
-    <div class="content">
-      <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About WayPoints | Digital Placemaking for DMOs</title>
+  <meta name="description" content="WayPoints helps destination marketing organizations prove ROI through privacy-first digital placemaking. No apps, no tracking, just results." />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:wght@600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    .font-serif {
+      font-family: 'Fraunces', serif;
+    }
+    .font-sans {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-900 bg-white">
+  
+  <!-- Header -->
+  <header class="w-full px-6 pt-6 flex justify-between items-center max-w-6xl mx-auto">
+    <a href="/">
+      <img src="images/logo-horizontal-light.png" alt="WayPoints Logo" class="h-10 sm:h-12" />
+    </a>
+    <a href="/" class="text-amber-700 font-semibold hover:underline">← Back</a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl font-serif font-bold mb-6">About WayPoints</h1>
+      <p class="text-xl text-gray-700 mb-8">
+        We're on a mission to help DMOs own their digital destiny and prove real tourism ROI.
+      </p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold mb-6">Our Mission</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        At WayPoints, we believe destinations deserve better than Silicon Valley's surveillance capitalism. Your visitors shouldn't have to sacrifice their privacy to explore your community, and you shouldn't have to guess whether your marketing actually drives revenue.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        We're building the digital infrastructure that real places need—technology that respects privacy, drives measurable business impact, and puts control back in the hands of destinations.
+      </p>
+    </div>
+  </section>
+
+  <!-- Why We Exist Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold mb-6">Why WayPoints Exists</h2>
       
-      <div class="max-w-4xl mx-auto px-6 py-12">
-        <h1 class="title text-3xl md:text-4xl font-serif mb-8">About Waypoints</h1>
-        
-        <div class="prose max-w-none">
-          <section class="mb-12">
-            <h2 class="text-2xl font-serif mb-4">Our Mission</h2>
-            <p class="mb-4">At Waypoints, we're on a mission to help communities celebrate their local trails and connect outdoor enthusiasts with neighborhood businesses. We believe that small towns and counties have hidden gems waiting to be discovered, from scenic paths and historic trails to just-built mountain bike trails.</p>
-            
-            <p class="mb-4">Our approach is built on three core pillars:</p>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 my-8">
-              <div class="feature-card">
-                <div class="icon-container">
-                  <i data-feather="compass"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Discover</h3>
-                <p>We help communities identify and promote their unique trail systems, transforming them into connectors between local attractions.</p>
-              </div>
-              
-              <div class="feature-card">
-                <div class="icon-container">
-                  <i data-feather="link"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Connect</h3>
-                <p>We build bridges between trail users and nearby businesses, creating meaningful connections that benefit the entire community.</p>
-              </div>
-              
-              <div class="feature-card">
-                <div class="icon-container">
-                  <i data-feather="bar-chart-2"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2">Thrive</h3>
-                <p>We implement small-scale solutions that deliver measurable impact for local economies while preserving the authentic character of each town.</p>
-              </div>
-            </div>
-          </section>
-          
-          <section class="mb-12">
-            <h2 class="text-2xl font-serif mb-4">Our Story</h2>
-            <p class="mb-4">Waypoints was founded in 2024 by a small team of Midwestern outdoor enthusiasts and community advocates who saw an opportunity to highlight the region's incredible trail systems.</p>
-            
-            <p class="mb-4">After exploring trails across the country, we noticed that many rural communities had excellent outdoor assets but lacked the tools to connect these resources with local businesses. Waypoints was born from a desire to celebrate these hidden gems and help regional economies thrive.</p>
-            
-            <p class="mb-4">Waypoints was born from the belief that by bringing together the right mix of strategic planning, technology solutions, and community engagement, we could help regions chart a path to sustainable growth and prosperity.</p>
-          </section>
-          
-          <section class="mb-12">
-            <h2 class="text-2xl font-serif mb-4">Our Approach</h2>
-            <p class="mb-4">We work closely with county tourism offices, chambers of commerce, and local businesses to develop tailored solutions that address the unique character of each community.</p>
-          </section>
-          
-          <section class="mb-12">
-            <h2 class="text-2xl font-serif mb-4">Our Impact</h2>
-            <p class="mb-4">Our partnerships have helped communities:</p>
-            
-            <ul class="list-disc pl-6 mb-6">
-              <li class="mb-2">Increase foot traffic to main street businesses</li> 
-              <li class="mb-2">Forge new partnerships between trail users and local merchants</li>
-              <li class="mb-2">Facilitate meaningful connections between trail access advocacy groups</li>
-            </ul>
-            
-            <p class="mb-6">We're proud of the results we've achieved, and we're excited to help more communities thrive.</p>
-          </section>
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-3">The Problem</h3>
+          <p class="text-gray-700">
+            DMOs spend millions on marketing but can't prove it drives local business revenue. Meanwhile, Big Tech harvests visitor data, controls your reach, and profits from your destination's content. Privacy regulations make traditional tracking impossible, and visitors refuse to download yet another app.
+          </p>
         </div>
-        
-        <div class="text-center mt-12">
-          <button class="button modal-toggle">Partner with Waypoints</button>
-        </div>
-      </div>
-
-      <footer class="footer">
-        <div class="max-w-5xl mx-auto px-6">
-          <div class="flex flex-col md:flex-row justify-between items-center py-6">
-            <div class="mb-4 md:mb-0">
-              <img src="images/logodo.png" alt="Waypoints logo" class="h-14">
-            </div>
-            <div class="flex space-x-6">
-              <a href="about.html" class="text-gray-700 hover:text-gray-900">About</a>
-              <a href="#" class="text-gray-700 hover:text-gray-900 modal-toggle">Contact</a>
-              <a href="privacy.html" class="text-gray-700 hover:text-gray-900">Privacy</a>
-            </div>
-          </div>
-          <div class="border-t border-gray-200 py-4 text-sm text-center text-gray-600">
-            &copy; 2025 Waypoints. All rights reserved.
-          </div>
-        </div>
-      </footer>
-    </div>
-    
-    <!-- Modal for contact form (same as in index.html) -->
-    <div class="modal">
-      <button type="button" class="modal-close modal-toggle"><i class="icon" data-feather="x"></i><span class="hide-mobile">ESC</span></button>
-      <div class="modal-content">
-        <div class="success">
-          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
-          <h2 class="modal-title first-name" id="title-name"></h2>
-          <p>Thank you for reaching out! We'll be in touch with you shortly to discuss how Waypoints can help your local community.</p>
-          <a href="index.html" class="button">Back home</a>
-        </div>
-        <div class="form-content">
-          <a href="index.html" class="logo"><img src="images/logodo.png" alt="Waypoints logo"/></a>
-          <h2 class="modal-title">Connect with Waypoints</h2>
-          <p class="modal-subtitle">We partner with towns and counties to highlight local trails and businesses. Let's discuss how we can support your community.</p>
-          <form class='form' action="https://formspree.io/f/xyzeonnz" method="POST">
-            <div class="group">
-              <input type="text" id="firstName" name="first-name" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="firstName">First name</label>
-              <span class="border"></span>
-            </div>
-            <div class="group">
-              <input type="email" name="email" id="email" placeholder="&nbsp;" autocomplete="off" required>
-              <label for="email">Email</label>
-              <span class="border"></span>
-            </div>
-            <div class="group checkbox-group">
-              <p class="checkbox-label">I'm interested in:</p>
-              <div class="checkbox-container">
-                <div class="checkbox-item">
-                  <input type="checkbox" id="interest-partner" name="interest-partner" value="Partner">
-                  <label for="interest-partner">Partner with us for local promotion</label>
-                </div>
-                <div class="checkbox-item">
-                  <input type="checkbox" id="interest-user" name="interest-user" value="User">
-                  <label for="interest-user">Join as a user</label>
-                </div>
-              </div>
-            </div>
-            <input type="hidden" name="_subject" value="New Waypoints Contact">
-            <input type="hidden" name="_next" value="https://mywaypoints.app/?thank-you=true">
-            <button type="submit" class="button">Get in Touch</button>
-          </form>
+        <div>
+          <h3 class="text-xl font-semibold mb-3">Our Solution</h3>
+          <p class="text-gray-700">
+            WayPoints is the privacy-first digital placemaking platform that actually works. No app downloads, no personal data collection, no creepy tracking. Just real visitor engagement data and measurable business impact that you can show your board.
+          </p>
         </div>
       </div>
     </div>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script>
-      $(function(){
-        // Initialize Feather icons
-        feather.replace();
-        
-        // Open & close modal with Google Analytics tracking
-        $('.modal-toggle').click(function(){
-          $('.modal').toggleClass('modal-show');
-          $('.content').toggleClass('content-blurred');
-          $('body').toggleClass('no-scroll');
-          
-          // Track modal opens in Google Analytics
-          if (!$('.modal').hasClass('modal-show')) {
-            gtag('event', 'modal_open', {
-              'event_category': 'Engagement',
-              'event_label': 'Modal Open'
-            });
-          }
-        });
+  </section>
 
-        // Close modal on escape key
-        $(document).keyup(function(e) {
-          if (e.key === "Escape") {
-            $('.modal').removeClass('modal-show');
-            $('.content').removeClass('content-blurred');
-            $('body').removeClass('no-scroll');
-          }
-        });
-
-        // Form submission with Google Analytics tracking
-        $(".form").submit(function(e) {
-          // Track form submissions in Google Analytics
-          gtag('event', 'form_submit', {
-            'event_category': 'Conversion',
-            'event_label': 'Contact Form'
-          });
-          
-          // Get the first name to personalize thank you message
-          var firstName = $("#firstName").val();
-          $('.first-name').text("Thank you, " + firstName + "!");
-          
-          // Only show the success UI immediately if we're in development
-          // In production, Formspree will handle the redirect
-          if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
-            e.preventDefault();
-            $('.form-content').addClass('form-content-hide');
-            $('.success').addClass('success-show');
-          }
-        });
+  <!-- Our Values Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold mb-8">Our Values</h2>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Privacy First</h3>
+          <p class="text-gray-600">
+            We believe visitors shouldn't sacrifice privacy to explore. 100% GDPR compliant by design.
+          </p>
+        </div>
         
-        // Check for thank-you parameter in URL to show success message
-        $(document).ready(function() {
-          if (window.location.search.includes('thank-you=true')) {
-            $('.modal').addClass('modal-show');
-            $('.content').addClass('content-blurred');
-            $('body').addClass('no-scroll');
-            $('.form-content').addClass('form-content-hide');
-            $('.success').addClass('success-show');
-          }
-        });
-      });
-    </script>
-  </body>
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">Real Results</h3>
+          <p class="text-gray-600">
+            No vanity metrics. We measure what matters: visitor flow to business revenue.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="w-8 h-8 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-lg mb-2">You Own It</h3>
+          <p class="text-gray-600">
+            Your data, your visitors, your revenue. No middlemen, no commission, no control lost.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="py-12 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold mb-6">Our Story</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        WayPoints was born from frustration. After years of watching DMOs struggle to prove their value while Big Tech profited from destination content, we knew there had to be a better way.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        We started with a simple question: What if destinations could track real visitor behavior and business impact without violating anyone's privacy? What if DMOs could own their digital infrastructure instead of renting it from Silicon Valley?
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Today, WayPoints powers digital placemaking for forward-thinking DMOs who refuse to accept the status quo. We're building the future where destinations control their own digital destiny.
+      </p>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section class="py-12 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-serif font-bold mb-6">Our Approach</h2>
+      <p class="text-lg text-gray-700 mb-6">
+        We're not another vendor selling you promises. We're your partner in digital transformation. Our success is measured by your success—real revenue flowing to real businesses in your destination.
+      </p>
+      <p class="text-lg text-gray-700 mb-6">
+        Every destination is unique. That's why WayPoints offers six different solutions you can mix and match: Loyalty Rewards, Route Rewards, Business Locator, Walking Tours, Event Tracker, and Community Finance. Start with one, add more as you grow.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-amber-700 text-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-serif font-bold mb-4">Ready to Take Back Control?</h2>
+      <p class="text-xl mb-8">
+        Join DMOs who are done letting Silicon Valley own their destinations.
+      </p>
+      <a href="/partners.html#demo-call" class="bg-white text-amber-700 px-8 py-4 rounded-md font-semibold hover:bg-gray-100 transition text-lg inline-block">
+        Schedule Your Demo
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 py-10 text-center text-sm text-gray-600">
+    <p>&copy; 2025 WayPoints. All rights reserved.</p>
+    <div class="mt-4 flex justify-center gap-6 text-sm">
+      <a href="/" class="hover:text-gray-900">Home</a>
+      <a href="/privacy.html" class="hover:text-gray-900">Privacy</a>
+      <a href="/partners.html#contact" class="hover:text-gray-900">Contact</a>
+    </div>
+  </footer>
+</body>
 </html>
